@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_comp"
+    app:startDestination="@id/SummationFragment">
+
+    <fragment
+        android:id="@+id/SummationFragment"
+        android:name="com.example.upschool_bottom_nav.SummationFragment"
+        android:label="fragment_summation"
+        tools:layout="@layout/fragment_summation" >
+        <action
+            android:id="@+id/sumToResult"
+            app:destination="@id/sumResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MultiplicationFragment"
+        android:name="com.example.upschool_bottom_nav.MultiplicationFragment"
+        android:label="fragment_multiplication"
+        tools:layout="@layout/fragment_multiplication" >
+        <action
+            android:id="@+id/multToResult"
+            app:destination="@id/multResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/multResultFragment"
+        android:name="com.example.upschool_bottom_nav.MultResultFragment"
+        android:label="fragment_mult_result"
+        tools:layout="@layout/fragment_mult_result" >
+        <argument
+            android:name="result"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/sumResultFragment"
+        android:name="com.example.upschool_bottom_nav.SumResultFragment"
+        android:label="fragment_sum_result"
+        tools:layout="@layout/fragment_sum_result" >
+        <argument
+            android:name="result"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
